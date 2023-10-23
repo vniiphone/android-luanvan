@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/linear_hoadon_item"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="3dp"
+    android:background="@drawable/input_text_field_styling_light_3"
+    android:orientation="vertical"
+    android:padding="5dp">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/item_hoadon_tentour"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:text="Nha Trang Đà Lạt 2 Ngày 1 Đêm"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/item_hoadon_status"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:text="Đang Xác Nhận"
+            android:textColor="@color/black"
+            android:textSize="11sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/item_hoadon_image_tour"
+            android:layout_width="170dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="15dp"
+            android:src="@drawable/vinwonder"
+            app:layout_constraintStart_toStartOf="@+id/item_hoadon_tentour"
+            app:layout_constraintTop_toBottomOf="@+id/item_hoadon_tentour" />
+
+        <TextView
+            android:id="@+id/item_hoadon_soluongvedat"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:paddingTop="5dp"
+            android:text="Số lượng vé đã đặt:"
+            android:textColor="@color/black"
+            android:textSize="13sp"
+            app:layout_constraintStart_toStartOf="@+id/item_hoadon_ngayxp"
+            app:layout_constraintTop_toBottomOf="@+id/item_hoadon_noikhoihanh" />
+
+        <TextView
+            android:id="@+id/item_hoadon_ngayxp"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:paddingTop="5dp"
+            android:text="Ngày Xuất Phát: 16/10/2023 16:30"
+            android:textColor="@color/black"
+            android:textSize="13sp"
+            app:layout_constraintStart_toEndOf="@+id/item_hoadon_image_tour"
+            app:layout_constraintTop_toTopOf="@+id/item_hoadon_image_tour" />
+
+        <TextView
+            android:id="@+id/item_hoadon_noikhoihanh"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:paddingTop="5dp"
+            android:text="Nơi Khởi Hành: Tp Hồ Chí Minh"
+            android:textColor="@color/black"
+            android:textSize="13sp"
+            app:layout_constraintEnd_toEndOf="@+id/item_hoadon_ngayxp"
+            app:layout_constraintStart_toStartOf="@+id/item_hoadon_soluongvedat"
+            app:layout_constraintTop_toBottomOf="@+id/item_hoadon_ngayxp" />
+
+        <TextView
+            android:id="@+id/item_hoadon_totalprice"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:paddingLeft="15dp"
+            android:paddingTop="5dp"
+            android:text="Tổng cộng: 600.000.000 VND"
+            android:textColor="@color/black"
+            android:textSize="13sp"
+            app:layout_constraintStart_toStartOf="@+id/item_hoadon_image_tour"
+            app:layout_constraintTop_toBottomOf="@+id/item_hoadon_image_tour" />
+
+        <Button
+            android:id="@+id/item_hoadon_btn_xemthem"
+            android:layout_width="95dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/btn_xac_nhan_dat_ve_rounder"
+            android:text="Xem Thêm"
+            android:textColor="@color/Dark_royal_purple"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@+id/item_hoadon_totalprice"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/item_hoadon_totalprice"
+            app:layout_constraintTop_toBottomOf="@+id/item_hoadon_soluongvedat" />
+
+
+    </android.support.constraint.ConstraintLayout>
+</LinearLayout>

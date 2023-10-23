@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:id="@+id/layout_item_loaiTour"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+android:layout_margin="10px"
+    android:background="@drawable/bg_item_loaitour"
+    android:padding="5dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_marginTop="20px"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_gravity="center"
+            style="@style/TextStyle"
+            android:textColor="@color/cardview_dark_background"
+                android:textStyle="bold"
+            android:text="Tên Loại Tour: "/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:id="@+id/item_loaiTour_tenLoaiTour"
+            android:layout_gravity="center"
+            android:textColor="@color/cardview_dark_background"
+
+            style="@style/TextStyle"
+            android:text="Trong nước"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_marginTop="20px"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/cardview_dark_background"
+android:textStyle="bold"
+            android:layout_gravity="center"
+            style="@style/TextStyle"
+            android:text="Nội Dung: "/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/cardview_dark_background"
+
+            android:id="@+id/item_loaiTour_noiDung"
+            android:layout_gravity="center"
+            style="@style/TextStyle"
+            android:text="Các tour liên quan đến Biển"/>
+    </LinearLayout>
+</LinearLayout>

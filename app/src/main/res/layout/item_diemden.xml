@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_item_loaitour"
+android:id="@+id/layout_item_diemden"
+    android:padding="2dp">
+
+    <TextView
+        android:id="@+id/tv_tendiemden"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:gravity="center_horizontal"
+        android:text="Tham Quan Hòn Chồng"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <TableLayout
+        android:id="@+id/table_layout_item_diemden"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_tendiemden">
+        <TableRow>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="Nội Dung: "
+                android:textSize="14sp"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/tv_noidungdiemden"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tham Quan"
+                android:textSize="14sp" />
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="Giá Vé: "
+                android:textSize="14sp"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/tv_giavethamquan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="100.000 VND/Người Lớn"
+                android:textSize="14sp" />
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="Địa Chỉ: "
+                android:textSize="14sp"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/tv_diachidiemden"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Đường Trần Phú, Tp Nha Trang"
+                android:textSize="14sp" />
+        </TableRow>
+    </TableLayout>
+</RelativeLayout>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" android:orientation="vertical"
+    android:background="@drawable/backgroundtravelapp"
+    tools:context="appdulich.booking.giaodien.AddCategory">
+
+    <TextView
+        android:id="@+id/txt_AddCate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Add New Category Using API"
+        android:textColor="@color/white"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.362" />
+
+    <LinearLayout
+        android:id="@+id/linearlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="5dp"
+        android:padding="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/txt_AddCate">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+            <EditText
+                android:background="@drawable/input_text_field_styling"
+                android:paddingLeft="10dp"
+                android:id="@+id/edt_namecate"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="50dp"
+                android:inputType="text"
+                android:hint="Category Name"/>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_saveCate"
+            android:layout_width="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_height="50dp"
+            android:background="@drawable/main_btn_styling"
+            android:layout_weight="1"
+            android:textColor="@color/Dark_royal_purple"
+            android:textSize="25sp"
+            android:textFontWeight="700"
+            android:text="Save" />
+    </LinearLayout>
+    <Button
+        android:id="@+id/btn_backtohome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/Dark_royal_purple"
+        android:drawableLeft="@drawable/ic_baseline_arrow"
+        android:onClick="backtohome"
+        android:padding="15dp"
+        android:layout_marginLeft="20dp"
+        android:text="BACK TO HOME"
+        android:layout_marginTop="35dp"
+        android:textColor="@color/Tropical_blue"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearlayout" />
+</androidx.constraintlayout.widget.ConstraintLayout>

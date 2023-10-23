@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/swipeRefreshLayout_Tour"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/Light_purple"
+    tools:context="appdulich.booking.giaodien.TourActivityList">
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/tour_recycleview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="appdulich.booking.giaodien.GioHangActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/tool_bar_giohang"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_alignParentTop="true"
+        android:background="@color/xanhduongdam"
+        app:title="Tour Yêu Thích" />
+
+    <!-- <TextView
+         android:id="@+id/tit"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:layout_below="@id/toolbar"
+         android:text="Tour đã yêu thích"
+         style="@style/LabelStyle"
+         android:textSize="25sp"
+         android:gravity="center"
+         android:background="@color/white"
+         android:textStyle="bold"/>-->
+
+    <!--   <Button
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:text="XÁC NHẬN ĐẶT"
+        android:layout_above="@id/bottom_navigation"
+        android:background="@drawable/btn_xac_nhan_dat_ve_rounder"
+        android:textColor="@color/Dark_royal_purple"
+        android:textSize="22sp"
+        android:textStyle="normal"/>-->
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefreshLayout_gio_hang"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/tool_bar_giohang"
+        android:layout_above="@id/bottom_navigation"
+        android:background="@color/WhiteSmoke">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view_giohang"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/toolbar"
+            android:layout_weight="2"
+            android:scrollbars="vertical"
+            tools:listitem="@layout/item_giohang" />
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:itemBackground="@color/DeepSkyBlue"
+        app:itemIconTint="@drawable/selector"
+        app:itemTextColor="@drawable/selector"
+        app:menu="@menu/menu" />
+</RelativeLayout>

@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawerlayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="appdulich.booking.giaodien.HomeActivity">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/tool_bar_trangchu"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/Dark_royal_purple"
+            app:title="Trang Chủ"
+            app:titleTextColor="@color/Light_purple">
+
+        </androidx.appcompat.widget.Toolbar>
+       <!-- <com.google.android.material.navigation.NavigationView
+            android:id="@+id/navigationview"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:fitsSystemWindows="true">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/Light_purple"
+                android:orientation="vertical">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/tour_recycleview_home_activity_category"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+        </com.google.android.material.navigation.NavigationView>-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@color/cardview_shadow_end_color"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/edt_search"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/shape_rectagle2"
+                android:drawableTint="@color/Dark_royal_purple"
+                android:hint="Search"
+                android:inputType="textPersonName"
+                android:padding="10dp"
+                android:textColor="@color/Dark_royal_purple"
+                android:textColorHint="@color/Dark_royal_purple" />
+
+            <ImageButton
+                android:id="@+id/imgbtn_search"
+                android:layout_width="40dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/shape_rectagle2"
+                android:outlineAmbientShadowColor="@color/xanhduongdam"
+                android:src="@drawable/ic_baseline_search_24"
+
+                />
+        </LinearLayout>
+
+
+       <!-- <ViewFlipper
+            android:id="@+id/viewflipper"
+            android:layout_width="match_parent"
+            android:layout_height="350px">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="350px"
+                android:background="@drawable/banner"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="650px"
+                    android:layout_height="350px"
+                    android:layout_gravity="left"
+
+                    android:layout_marginLeft="-70px"
+                    android:src="@drawable/text_banner" />
+            </LinearLayout>
+        </ViewFlipper>-->
+
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/swipeRefreshLayout_Tour"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/Light_purple">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/Light_purple"
+                android:orientation="vertical">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/tour_recycleview2_home_activity"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+    </LinearLayout>
+
+
+
+
+</androidx.drawerlayout.widget.DrawerLayout>

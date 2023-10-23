@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/WhiteSmoke"
+    tools:context="appdulich.booking.giaodien.InvoiceActivity">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar" />
+
+    <TextView
+        android:id="@+id/invoice_tv_tentour"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:gravity="center"
+        android:text="Ninh Chữ - Vĩnh Hy 3 ngày 2 đêm"
+        android:textColor="@color/Plain_purple"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/invoice_layout_button"
+        android:layout_below="@id/invoice_tv_tentour">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/invoice_layout_tourinfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/invoice_tv_ngayxp"
+                    android:layout_width="290dp"
+                    android:layout_height="wrap_content"
+                    android:text="Ngày khởi hành: 16/02/2023 22h00"
+                    android:textColor="@color/Dark_royal_purple"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/invoice_tv_noikhoihanh"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="Nơi Xuất Phát: Thành Phố Hồ Chí Minh"
+                    android:textColor="@color/Dark_royal_purple"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="@+id/invoice_tv_ngayxp"
+                    app:layout_constraintTop_toBottomOf="@+id/invoice_tv_ngayxp" />
+
+                <TextView
+                    android:id="@+id/invoice_tv_giavetour"
+                    android:layout_width="290dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="Giá Vé Tour: 2.000.000 VND"
+                    android:textColor="@color/Dark_royal_purple"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="@+id/invoice_tv_noikhoihanh"
+                    app:layout_constraintTop_toBottomOf="@+id/invoice_tv_noikhoihanh" />
+
+                <TextView
+                    android:id="@+id/invoice_tv_soluongveconlai"
+                    android:layout_width="290dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="Số Lượng Vé Còn Lại: 22"
+                    android:textColor="@color/Dark_royal_purple"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="@+id/invoice_tv_giavetour"
+                    app:layout_constraintTop_toBottomOf="@+id/invoice_tv_giavetour" />
+            </android.support.constraint.ConstraintLayout>
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/invoice_layout_tourinfo"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/textView9"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="10dp"
+                    android:text="Thông Tin Vé Đặt"
+                    android:textColor="@color/Dark_royal_purple"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <EditText
+                    android:id="@+id/invoice_edt_soluongve"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/input_text_field_styling_light_3"
+                    android:gravity="center_vertical"
+                    android:hint="Số lượng Vé"
+                    android:paddingLeft="15dp"
+                    android:textColor="@color/Dark_royal_purple"
+                    android:textColorHint="@color/Dark_royal_purple"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView9" />
+
+                <TextView
+                    android:id="@+id/invoice_tv_chonprofile"
+                    android:layout_width="140dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:paddingLeft="10dp"
+                    android:text="Profile Đặt Vé"
+                    android:textColor="@color/Dark_royal_purple"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="@+id/invoice_edt_soluongve"
+                    app:layout_constraintTop_toBottomOf="@+id/invoice_edt_soluongve" />
+
+                <Spinner
+                    android:id="@+id/invoice_spn_profiles"
+                    style="@style/CustomSpinnerStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:popupBackground="@drawable/input_text_field_styling_light_3"
+                    android:prompt="@string/spinner_title"
+                    app:layout_constraintEnd_toEndOf="@+id/invoice_edt_soluongve"
+                    app:layout_constraintStart_toStartOf="@+id/invoice_edt_soluongve"
+                    app:layout_constraintTop_toBottomOf="@+id/invoice_tv_chonprofile" />
+
+                <TextView
+                    android:id="@+id/invoice_tv_tongsotien"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:paddingLeft="15dp"
+                    android:text="Tổng Số Tiền Thanh Toán: 18.000.000 VND"
+                    android:textColor="@color/Dark_royal_purple"
+                    android:textSize="17sp"
+                    android:textStyle="bold"
+                    app:layout_constraintTop_toBottomOf="@+id/invoice_spn_profiles" />
+
+                <TextView
+                    android:id="@+id/invoice_tv_diachithanhtoan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:paddingLeft="15dp"
+                    android:text="STK thanh toán: 0692 0000 141414 Ngân Hàng BIDV Chi Nhánh Sa Đéc"
+                    android:textColor="@color/Dark_royal_purple"
+                    android:textSize="17sp"
+                    android:textStyle="bold"
+                    app:layout_constraintTop_toBottomOf="@+id/invoice_tv_tongsotien" />
+
+                <TextView
+                    android:id="@+id/invoice_tv_sdtcongty"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:paddingLeft="15dp"
+                    android:text="SĐT Liên Hệ: 06723 000 679 (Mr. Phong)"
+                    android:textColor="@color/Dark_royal_purple"
+                    android:textSize="17sp"
+                    android:textStyle="bold"
+                    app:layout_constraintTop_toBottomOf="@+id/invoice_tv_diachithanhtoan" />
+            </android.support.constraint.ConstraintLayout>
+
+
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/invoice_layout_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:padding="5dp">
+        <Button
+            android:id="@+id/invoice_btn_cancel"
+            android:layout_width="140dp"
+            android:layout_height="48dp"
+            android:layout_margin="5dp"
+            android:background="@drawable/btn_xac_nhan_dat_ve_rounder"
+            android:text="Hủy"
+            android:textColor="@color/White"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toStartOf="@+id/invoice_btn_confirm_datve"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/invoice_btn_confirm_datve"
+            android:layout_width="140dp"
+            android:layout_height="48dp"
+            android:layout_margin="5dp"
+            android:background="@drawable/btn_xac_nhan_dat_ve_rounder"
+            android:text="Xác Nhận"
+            android:textColor="@color/White"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </android.support.constraint.ConstraintLayout>
+</RelativeLayout>

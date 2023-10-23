@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal"
+    android:layout_margin="20dp"
+    android:id="@+id/id_layout_dialog_giohang_item"
+    android:background="@drawable/back_rounder_item_dialog"
+    android:padding="25dp">
+
+  <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Số Lượng Vé"
+        android:id="@+id/id_dialog_edtsove"
+        android:padding="5dp"
+        android:textSize="19sp"
+      android:textColor="@color/black"
+        android:layout_centerHorizontal="true"
+        />
+<!--
+ <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textinput_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Số Lượng Vé">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/id_dialog_giohang_edt_soLuongVeDat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:textSize="20sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+-->
+
+   <!-- <Button
+        android:id="@+id/dialog_item_datve_button_accept"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_below="@id/textinput_layout"
+        android:layout_alignParentRight="true"
+        android:layout_margin="7dp"
+        android:background="@drawable/main_btn_styling"
+        android:text="Đồng Ý"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/dialog_item_datve_button_cancel"
+
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_below="@id/textinput_layout"
+        android:layout_marginStart="7dp"
+
+        android:layout_marginTop="7dp"
+        android:layout_marginEnd="7dp"
+        android:layout_marginBottom="7dp"
+        android:layout_toLeftOf="@id/dialog_item_datve_button_accept"
+        android:background="@drawable/main_btn_styling"
+        android:text="Hủy"
+        android:textStyle="bold" />-->
+</RelativeLayout>

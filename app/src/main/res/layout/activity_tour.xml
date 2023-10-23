@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="appdulich.booking.giaodien.TourActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:layout_alignParentTop="true"
+        android:background="@color/cardview_shadow_end_color"
+        android:gravity="center"
+        android:id="@+id/layout_search"
+        android:orientation="horizontal">
+
+<!--        <EditText-->
+<!--            android:id="@+id/edt_search"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_weight="1"-->
+<!--            android:background="@drawable/shape_rectagle2"-->
+<!--            android:drawableTint="@color/Dark_royal_purple"-->
+<!--            android:hint="Search"-->
+<!--            android:inputType="textPersonName"-->
+<!--            android:padding="10dp"-->
+<!--            android:textColor="@color/Dark_royal_purple"-->
+<!--            android:textColorHint="@color/Dark_royal_purple" />-->
+
+<!--        <ImageButton-->
+<!--            android:id="@+id/imgbtn_search"-->
+<!--            android:layout_width="40dp"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:background="@drawable/shape_rectagle2"-->
+<!--            android:outlineAmbientShadowColor="@color/xanhduongdam"-->
+<!--            android:src="@drawable/ic_baseline_search_24"-->
+
+<!--            />-->
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/toolbar" />
+    </LinearLayout>
+
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefreshLayout_Tour_Activity"
+        android:layout_below="@id/layout_search"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="5dp"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/tour_recycleview_activity_listTour"
+                android:layout_width="match_parent"
+
+                tools:listitem="@layout/item_tour"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:itemBackground="@color/Tropical_blue"
+        app:itemIconTint="@drawable/selector"
+        app:itemTextColor="@drawable/selector"
+
+        app:menu="@menu/menu" />
+
+</RelativeLayout>

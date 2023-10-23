@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/item_giohang_id"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="2dp"
+    android:padding="7dp"
+    app:cardBackgroundColor="@color/GhostWhite">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/item_giohang_image"
+                android:layout_width="180dp"
+                android:layout_height="120dp"
+                android:src="@drawable/vinwonder"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </RelativeLayout>
+
+
+        <TextView
+            android:id="@+id/cardview_giohang_tentour"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:gravity="center_horizontal"
+            android:text="Tên Tour"
+            android:textColor="@color/Dark_royal_purple"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/relativeLayout"
+            app:layout_constraintTop_toTopOf="parent" />
+        <!--
+
+                <TextView
+                    android:id="@+id/cardview_giohang_soluongve"
+                    android:layout_width="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="Số Vé: 5"
+                    android:textColor="@color/Dark_royal_purple"
+                    android:textSize="15sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/relativeLayout"
+                    app:layout_constraintTop_toBottomOf="@+id/cardview_giohang_tentour" />
+        -->
+
+        <!--        <ImageView
+            android:id="@+id/img_edit_sovedat"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="5dp"
+            android:src="@drawable/baseline_edit_24"
+            app:layout_constraintBottom_toBottomOf="@+id/id_edt_soluongve"
+            app:layout_constraintStart_toEndOf="@+id/id_edt_soluongve"
+            app:layout_constraintTop_toBottomOf="@+id/cardview_giohang_tentour" />-->
+
+
+        <!--     <Button
+            android:id="@+id/btn_chinhSua_soVe"
+            android:layout_width="180dp"
+            android:layout_height="35dp"
+            android:text="Chỉnh Sửa"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cardview_giohang_soluongve" />
+-->
+
+
+        <LinearLayout
+            android:id="@+id/linear_text_slv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/relativeLayout"
+            app:layout_constraintTop_toBottomOf="@+id/cardview_giohang_tentour">
+
+            <TextView
+                android:id="@+id/tv_slv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="Số Vé"
+                android:textColor="@color/Dark_royal_purple"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/id_edt_soluongve"
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:focusableInTouchMode="true"
+                android:hint="5"
+                android:inputType="number"
+                android:textColor="@color/Dark_royal_purple"
+                android:textColorHint="@color/Dark_royal_purple"
+                android:textSize="13sp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_tongSoTien_item"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="Tổng Tiền: "
+
+            android:textColor="@color/Dark_royal_purple"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/relativeLayout"
+            app:layout_constraintTop_toBottomOf="@+id/linear_text_slv" />
+
+        <TextView
+            android:id="@+id/tv_idTour_item"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ID Tour: "
+            android:textColor="@color/Dark_royal_purple"
+            android:textSize="10sp"
+            app:layout_constraintBottom_toBottomOf="@+id/linear_text_slv"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/linear_text_slv"
+            app:layout_constraintTop_toBottomOf="@+id/cardview_giohang_tentour" />
+
+        <ImageView
+            android:id="@+id/img_btn_delete_cartItem"
+            android:layout_width="45px"
+            android:layout_height="45px"
+            android:src="@mipmap/delete"
+            android:layout_marginStart="15dp"
+            app:layout_constraintBottom_toBottomOf="@+id/btn_thucHienDatVe"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/btn_thucHienDatVe"
+            app:layout_constraintTop_toBottomOf="@+id/tv_tongSoTien_item" />
+
+        <Button
+            android:id="@+id/btn_thucHienDatVe"
+            android:layout_width="95dp"
+            android:layout_height="30dp"
+            android:background="@drawable/btn_xac_nhan_dat_ve_rounder"
+            android:text="Đặt Vé"
+            android:textColor="@color/Dark_royal_purple"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/relativeLayout"
+            app:layout_constraintTop_toBottomOf="@+id/tv_tongSoTien_item" />
+
+
+    </android.support.constraint.ConstraintLayout>
+</androidx.cardview.widget.CardView>

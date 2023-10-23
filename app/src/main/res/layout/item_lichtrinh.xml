@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout_item_lichtrinh"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_item_loaitour"
+    android:layout_marginBottom="4dp"
+    >
+
+    <TextView
+        android:id="@+id/tv_tenlichtrinh"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:gravity="center_horizontal"
+        android:text="Vũng Tàu Ngày Thứ 1"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TableLayout
+        android:id="@+id/table_layout_item_lichtrinh"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_tenlichtrinh"
+        android:layout_marginTop="2dp">
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="Ngày Thứ: "
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/sttlichtrinh"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1"
+                android:textSize="16sp" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="HDV: "
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_ghichu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nguyễn Quốc Vũ"
+                android:textSize="16sp" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="Phương Tiện: "
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_phuongtien"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Xe khách 47c Univers"
+                android:textSize="16sp" />
+        </TableRow>
+
+
+    </TableLayout>
+
+    <TextView
+        android:id="@+id/tv_lichtrinhchitiet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/table_layout_item_lichtrinh"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:text="Tham quan tượng Chúa, Mũi Nghinh Phong, Cafe Studio Lens"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/tv_label_diemden"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_lichtrinhchitiet"
+        android:paddingStart="10dp"
+        android:layout_marginEnd="15dp"
+        android:text="Điểm Tham Quan"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycle_diemden"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_label_diemden"
+        android:paddingStart="19dp"
+        android:layout_marginBottom="5dp"
+        />
+    <!--    tools:listitem="@layout/item_diemden"-->
+
+    <TextView
+        android:id="@+id/tv_tenkhachsan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/recycle_diemden"
+        android:gravity="center_horizontal"
+        android:textSize="15.5sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tv_giaPhongKhachSan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_tenkhachsan"
+        android:layout_marginStart="25dp"
+        android:layout_marginEnd="5dp"
+        android:text="Giá Phòng"
+        android:textSize="15sp"
+        android:textStyle="bold" />
+
+
+    <TextView
+        android:id="@+id/tv_diaChiKhachSan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_giaPhongKhachSan"
+        android:layout_marginStart="25dp"
+        android:layout_marginEnd="5dp"
+        android:text="Địa Chỉ:"
+        android:textSize="15sp"
+        android:textStyle="bold" />
+    <TextView
+        android:id="@+id/tv_phoneKhachSan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_diaChiKhachSan"
+        android:layout_marginStart="25dp"
+        android:layout_marginEnd="5dp"
+        android:text="Số ĐT"
+        android:textSize="15sp"
+        android:textStyle="bold" />
+
+    <!--   <LinearLayout
+           android:layout_below="@id/tv_tenkhachsan"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="vertical">
+       </LinearLayout>-->
+
+
+</RelativeLayout>

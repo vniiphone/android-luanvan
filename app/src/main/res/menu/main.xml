@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <group>
+        <item
+            android:id="@+id/back_action"
+            android:orderInCategory="100"
+            android:title="Trở về"
+            app:showAsAction="never" />
+        <item
+            android:id="@+id/cart_action"
+            android:orderInCategory="100"
+            android:title="Giỏ hàng"
+            app:showAsAction="never" />
+
+    </group>
+    <group>
+        <item
+            android:id="@+id/action_signin"
+            android:orderInCategory="100"
+            android:title="@string/action_signin"
+            app:showAsAction="never" />
+        <item
+            android:id="@+id/action_signup"
+            android:orderInCategory="100"
+            android:title="@string/action_signup"
+            app:showAsAction="never" />
+    </group>
+
+
+</menu>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_gravity="center_horizontal"
+    android:layout_margin="30dp"
+    android:padding="25dp"
+    android:background="@drawable/back_rounder_item_dialog"
+    android:layout_height="wrap_content">
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Số Lượng Vé"
+        android:id="@+id/edt_soLuongVeDat"
+        android:padding="5dp"
+        android:textSize="19sp"
+        android:textColor="@color/black"
+        android:layout_centerHorizontal="true"
+        />
+
+    <!--<com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:id="@+id/textinput_layout"
+        android:layout_height="wrap_content"
+        android:hint="Nhập số vé">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edt_soLuongVeDat"
+            android:layout_width="match_parent"
+            android:textSize="20sp"
+            android:layout_height="wrap_content"/>
+    </com.google.android.material.textfield.TextInputLayout>-->
+</RelativeLayout>

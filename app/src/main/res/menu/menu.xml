@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/mnu_home"
+        android:title="Trang Chủ"
+        android:icon="@drawable/ic_home"/>
+
+ <item
+        android:id="@+id/mnu_cart"
+        android:title="Yêu Thích"
+        android:icon="@drawable/cart"/>
+    <item
+        android:id="@+id/mnu_tools"
+        android:title="Công Cụ"
+        android:icon="@drawable/application"/>
+
+
+</menu>

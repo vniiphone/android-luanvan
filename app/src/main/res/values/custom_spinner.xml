@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="CustomSpinnerStyle" parent="Widget.AppCompat.ListView.DropDown">
+        <!-- Định dạng màu nền -->
+        <item name="android:background">@drawable/input_text_field_styling_light_3</item>
+        <!-- Định dạng màu chữ -->
+        <item name="android:textColor">@color/Dark_royal_purple</item>
+    </style>
+</resources>

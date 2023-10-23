@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:numberpicker="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="appdulich.booking.giaodien.ChiTietAddDatVe">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/xanhduongdam"
+        app:layout_constraintTop_toTopOf="parent"
+        app:menu="@menu/menu_on_detail"
+        app:title="Thêm vào yêu thích" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/Light"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/item_addtocart_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="5dp"
+            android:text="Tour Nha Trang - Đà Lạt"
+            android:textAlignment="center"
+            android:textColor="@color/Dark_royal_purple"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/item_addtocart_image"
+            android:layout_width="350dp"
+            android:layout_height="190dp"
+            android:layout_gravity="center"
+            android:layout_margin="5dp"
+            android:src="@drawable/dinhdoclap" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:gravity="left"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/Dark_royal_purple"
+                android:textSize="25sp"
+                android:layout_marginRight="15dp"
+                android:text="Nhập số vé"/>
+           <!-- <ImageButton
+                android:id="@+id/item_addtocart_sub"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:padding="5dp"
+                android:src="@drawable/ic_remove" />-->
+            <EditText
+                android:id="@+id/item_addtocart_quantity"
+                style="@style/TextStyle"
+                android:layout_width="55sp"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:background="@color/white"
+                android:textAlignment="center"
+                android:textColor="@color/Dark_royal_purple"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="vertical">
+<!--
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ngày đi:"
+                    android:textColor="@color/Dark_royal_purple"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/item_addtocart_startTrip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:text="30/4/2023"
+                    android:textColor="@color/Dark_royal_purple"
+                    android:textSize="20sp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginRight="4dp"
+                    android:src="@drawable/ic_remove" />
+
+                <TextView
+
+                    android:id="@+id/item_addtocart_endTrip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="30/4/2023"
+                    android:textColor="@color/Dark_royal_purple"
+                    android:textSize="20sp" />
+            </LinearLayout>-->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/item_slot"
+                    style="@style/TextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="5dp"
+                    android:text="Số vé còn lại:"
+                    android:textColor="@color/Dark_royal_purple"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/item_addtocart_slot_of_tour"
+                    style="@style/TextStyle"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="2dp"
+                    android:text="8"
+                    android:textColor="@color/Dark_royal_purple"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="15dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Gía vé:"
+                    android:textColor="@color/Dark_royal_purple"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/tv_price_tour"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:text="1.200.000 VND"
+                    android:textColor="@color/Dark_royal_purple"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="15dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tổng tiền:"
+                    android:textColor="@color/Dark_royal_purple"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/tv_price_total"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:text="0.000.000 VND"
+                    android:textColor="@color/Dark_royal_purple"
+                    android:textSize="20sp" />
+
+            </LinearLayout>
+
+
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_addtoFavo"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_gravity="center"
+        android:layout_margin="5dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/rounded_button2"
+        android:gravity="center"
+        android:text="Xác nhận"
+        android:textSize="25sp"
+        tools:ignore="TouchTargetSizeCheck" />
+</LinearLayout>
